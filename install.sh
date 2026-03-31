@@ -42,7 +42,6 @@ brew install \
   rust \
   kubectl \
   node \
-  pnpm \
   php \
   composer \
   starship \
