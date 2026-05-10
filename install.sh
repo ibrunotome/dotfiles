@@ -2,28 +2,6 @@
 
 set -e
 
-if ! xcode-select -p &>/dev/null; then
-  echo "Installing Command Line Tools..."
-  touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-
-  PROD=$(softwareupdate -l | grep -B 1 "Command Line Tools" | awk -F"*" '/\*/ {print $2}' | sed 's/^ *//')
-
-  if [ -z "$PROD" ]; then
-    echo "Failed to find Command Line Tools package. Install manually and re-run."
-    exit 1
-  fi
-
-  softwareupdate -i "$PROD" --verbose || {
-    echo "Automatic install failed. Install manually and re-run."
-    exit 1
-  }
-
-  rm /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
-
-  sudo xcode-select -switch /Library/Developer/CommandLineTools || true
-  sudo xcodebuild -license accept || true
-fi
-
 if ! command -v brew &>/dev/null; then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -36,16 +14,16 @@ brew update
 brew tap homebrew/cask-fonts
 
 brew install \
+  cloud-sql-proxy \
+  composer \
   direnv \
-  orbstack \
   go \
-  rust \
   kubectl \
   node \
+  orbstack \
   php \
-  composer \
+  rust \
   starship \
-  cloud-sql-proxy \
   wget \
   zsh-autosuggestions \
   zsh-syntax-highlighting
@@ -53,6 +31,7 @@ brew install \
 brew install --cask \
   dropbox \
   firefox \
+  font-jetbrains-mono-nerd-font \
   google-chrome \
   google-cloud-sdk \
   jetbrains-toolbox \
@@ -61,8 +40,7 @@ brew install --cask \
   sizzy \
   spotify \
   telegram \
-  visual-studio-code \
-  font-jetbrains-mono-nerd-font
+  zed
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "Installing Oh My Zsh..."
