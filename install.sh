@@ -24,6 +24,7 @@ brew install \
   php \
   rust \
   starship \
+  vite-plus \
   wget \
   zsh-autosuggestions \
   zsh-syntax-highlighting
@@ -35,7 +36,6 @@ brew install --cask \
   google-chrome \
   google-cloud-sdk \
   jetbrains-toolbox \
-  lens \
   paw \
   sizzy \
   spotify \
