@@ -8,6 +8,16 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "autosave": "on_focus_change",
+  "auto_install_extensions": {
+    "astro": true,
+    "git-firefly": true,
+    "laravel-official": true,
+    "log": true,
+    "oxc": true,
+    "toml": true,
+    "vue": true,
+    "wakatime": true
+  },
   "base_keymap": "Zed",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 13.0,
