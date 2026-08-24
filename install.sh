@@ -30,12 +30,12 @@ brew install \
   zsh-syntax-highlighting
 
 brew install --cask \
+  codex \
   dropbox \
   firefox \
   font-jetbrains-mono-nerd-font \
   google-chrome \
   google-cloud-sdk \
-  jetbrains-toolbox \
   paw \
   sizzy \
   spotify \
