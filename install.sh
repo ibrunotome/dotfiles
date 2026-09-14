@@ -11,19 +11,17 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew update
 
-brew tap homebrew/cask-fonts
-
 brew install \
   cloud-sql-proxy \
   composer \
   direnv \
   go \
   kubectl \
-  node \
-  orbstack \
+  oci-cli \
   php \
   rust \
   starship \
+  hashicorp/tap/terraform \
   vite-plus \
   wget \
   zsh-autosuggestions \
@@ -33,9 +31,10 @@ brew install --cask \
   codex \
   dropbox \
   firefox \
-  font-jetbrains-mono-nerd-font \
+  homebrew/cask-fonts/font-jetbrains-mono-nerd-font \
   google-chrome \
   google-cloud-sdk \
+  orbstack \
   paw \
   sizzy \
   spotify \
@@ -51,5 +50,6 @@ mkdir -p ~/.config
 
 cp .zshrc ~/.zshrc
 cp starship.toml ~/.config/starship.toml
+terraform -install-autocomplete
 
 echo "Done."
