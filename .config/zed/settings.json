@@ -28,6 +28,7 @@
     "dock": "left"
   },
   "colorize_brackets": true,
+  "confirm_quit": true,
   "debugger": {
     "button": false,
     "dock": "left"
