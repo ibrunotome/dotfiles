@@ -1,3 +1,7 @@
+"$schema" = "https://starship.rs/config-schema.json"
+add_newline = false
+right_format = "$kubernetes$terraform$docker_context$direnv$cmd_duration$status$jobs"
+
 format = """
 [░▒▓](#a3aed2)\
 [  ](bg:#a3aed2 fg:#090c0c)\
@@ -62,3 +66,19 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
+[kubernetes]
+disabled = false
+format = '[$symbol$context( \($namespace\))]($style) '
+
+[direnv]
+disabled = false
+format = '[$symbol$loaded/$allowed]($style) '
+
+[cmd_duration]
+min_time = 2_000
+format = '[$duration](fg:#a0a9cb) '
+
+[status]
+disabled = false
+format = '[$symbol$status](bold red) '

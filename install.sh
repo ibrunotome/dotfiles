@@ -12,9 +12,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 
 brew install \
+  antidote \
+  bun \
   cloud-sql-proxy \
   composer \
   direnv \
+  gh \
   go \
   kubectl \
   oci-cli \
@@ -23,9 +26,7 @@ brew install \
   starship \
   hashicorp/tap/terraform \
   vite-plus \
-  wget \
-  zsh-autosuggestions \
-  zsh-syntax-highlighting
+  wget
 
 brew install --cask \
   codex \
@@ -41,14 +42,10 @@ brew install --cask \
   telegram \
   zed
 
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo "Installing Oh My Zsh..."
-  RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
 mkdir -p ~/.config
 
 cp .zshrc ~/.zshrc
+cp .zsh_plugins.txt ~/.zsh_plugins.txt
 cp starship.toml ~/.config/starship.toml
 terraform -install-autocomplete
 

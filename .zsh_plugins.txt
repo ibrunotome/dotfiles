@@ -1,0 +1,22 @@
+# Oh My Zsh compatibility and integrations
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/bun
+ohmyzsh/ohmyzsh path:plugins/gh
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/brew
+ohmyzsh/ohmyzsh path:plugins/composer
+ohmyzsh/ohmyzsh path:plugins/direnv
+ohmyzsh/ohmyzsh path:plugins/docker
+ohmyzsh/ohmyzsh path:plugins/gcloud
+ohmyzsh/ohmyzsh path:plugins/golang
+ohmyzsh/ohmyzsh path:plugins/kubectl
+ohmyzsh/ohmyzsh path:plugins/laravel
+ohmyzsh/ohmyzsh path:plugins/macos
+ohmyzsh/ohmyzsh path:plugins/rust
+ohmyzsh/ohmyzsh path:plugins/terraform
+
+# Native Zsh plugins
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
